@@ -1,0 +1,17 @@
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#050816,#0a1230);color:#e6f1ff;font-family:Segoe UI,sans-serif}
+#bg{position:fixed;inset:0;z-index:-2}.grid{position:fixed;inset:0;z-index:-1;background-image:linear-gradient(#00d4ff14 1px,transparent 1px),linear-gradient(90deg,#00d4ff14 1px,transparent 1px);background-size:40px 40px;animation:g 8s linear infinite}
+@keyframes g{to{background-position:40px 40px}}
+aside{position:fixed;top:0;left:0;bottom:0;width:230px;padding:20px;background:#0008;backdrop-filter:blur(12px);border-right:1px solid #00d4ff44;transition:.3s}
+aside h2{color:#00d4ff;text-shadow:0 0 12px #00d4ff}aside a{display:block;padding:12px;margin:6px 0;color:#cfe;text-decoration:none;border-radius:8px;transition:.2s}
+aside a:hover,aside a.on{background:#00d4ff22;box-shadow:0 0 12px #00d4ff55}main{margin-left:230px;padding:24px;transition:.3s}
+.collapsed aside{transform:translateX(-100%)}.collapsed main{margin-left:0}#tg{background:none;border:0;color:#00d4ff;font-size:24px;cursor:pointer}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:16px}
+.card{background:#ffffff0d;border:1px solid #00d4ff33;border-radius:14px;padding:16px;backdrop-filter:blur(10px);margin-bottom:16px;transition:.2s}.card:hover{box-shadow:0 0 20px #8b5cf655}
+.card small{display:block;color:#8fb}.card b{font-size:26px;color:#00d4ff}
+.frm{display:flex;flex-wrap:wrap;gap:10px}input,select{padding:10px;background:#0a1230;color:#fff;border:1px solid #00d4ff55;border-radius:8px}
+.btn{padding:10px 20px;border:0;border-radius:8px;background:linear-gradient(90deg,#00d4ff,#8b5cf6);color:#fff;cursor:pointer;box-shadow:0 0 14px #00d4ff88}.btn:hover{transform:translateY(-2px)}
+table{width:100%;border-collapse:collapse}th,td{padding:8px;text-align:left;border-bottom:1px solid #00d4ff22}
+.err{background:#ff4d6d33;padding:10px;border-radius:8px;margin-bottom:12px}
+.login{max-width:360px;margin:12vh auto;display:flex;flex-direction:column;gap:12px}
+@media(max-width:800px){aside{transform:translateX(-100%)}main{margin-left:0}.collapsed aside{transform:none}}
+@media print{aside,#tg,.btn,.grid,#bg{display:none}main{margin:0}body{background:#fff;color:#000}}
